@@ -17,13 +17,72 @@
                     <view key="view" contentMode="scaleToFill" id="xyC-kN-me4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-nu-Lr7">
+                                <rect key="frame" x="60" y="120" width="200" height="190"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMw-sN-0NO">
+                                        <rect key="frame" x="63.5" y="0.0" width="73" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5du-sd-0lr">
+                                        <rect key="frame" x="0.0" y="70" width="200" height="50"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <action selector="onTextFieldChanged:" destination="rcs-93-qql" eventType="editingChanged" id="wXt-Zc-ItU"/>
+                                            <outlet property="delegate" destination="rcs-93-qql" id="WPd-yo-yJB"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un1-AI-8Xx">
+                                        <rect key="frame" x="0.0" y="140" width="200" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="JYY-En-Enn"/>
+                                            <constraint firstAttribute="height" constant="50" id="slD-OU-0VK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButtonOKClicked:" destination="rcs-93-qql" eventType="touchUpInside" id="Pwg-Br-ddr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5du-sd-0lr" firstAttribute="leading" secondItem="Rca-nu-Lr7" secondAttribute="leading" id="LgK-Oc-MeS"/>
+                                    <constraint firstAttribute="trailing" secondItem="5du-sd-0lr" secondAttribute="trailing" id="pxY-RG-Rs0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rca-nu-Lr7" firstAttribute="top" secondItem="bEe-EV-Atk" secondAttribute="top" constant="100" id="5Jv-V1-hVr"/>
+                            <constraint firstItem="Rca-nu-Lr7" firstAttribute="centerX" secondItem="bEe-EV-Atk" secondAttribute="centerX" id="ZSt-cM-8k9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bEe-EV-Atk"/>
                     </view>
+                    <connections>
+                        <outlet property="bnOK" destination="un1-AI-8Xx" id="B33-YV-d2m"/>
+                        <outlet property="tfEmail" destination="5du-sd-0lr" id="ejx-Cp-muO"/>
+                        <segue destination="Uc1-Gr-aiD" kind="show" identifier="showEcom" id="sAB-JE-sOD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2TB-K0-CxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="2"/>
+            <point key="canvasLocation" x="174" y="0.0"/>
+        </scene>
+        <!--Ecom-->
+        <scene sceneID="0XQ-dC-xsZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ecom" id="Uc1-Gr-aiD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxj-hR-Mcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="1"/>
         </scene>
     </scenes>
 </document>

@@ -4,7 +4,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var userStore = UserStore()
+    
+    class func appdelegate()->AppDelegate{
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
 
     func application(
         _ application: UIApplication,
@@ -12,7 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let initialView:UIViewController = RegisterViewController.instantiate()
+        let initialView:UIViewController
+        if !AppDelegate.appdelegate().userStore.isUserSignedIn(){
+            initialView = RegisterViewController.instantiate()
+        }else{
+            initialView = EcomViewController.instantiate()
+        }
         self.window?.rootViewController = initialView
         self.window?.makeKeyAndVisible()
         
