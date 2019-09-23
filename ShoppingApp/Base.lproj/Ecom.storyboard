@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IrA-zf-R2t">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="IrA-zf-R2t">
                             <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -63,15 +63,17 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="1PR-j1-uCi" secondAttribute="trailing" priority="500" constant="10" id="6Iu-PV-pcl"/>
+                                    <constraint firstAttribute="trailing" secondItem="1PR-j1-uCi" secondAttribute="trailing" constant="10" id="6Iu-PV-pcl"/>
                                     <constraint firstItem="oRG-Nx-UEO" firstAttribute="centerX" secondItem="0jj-bD-P2p" secondAttribute="centerX" id="6VV-D9-Izp"/>
-                                    <constraint firstItem="7gb-aU-S5Y" firstAttribute="top" secondItem="0jj-bD-P2p" secondAttribute="top" priority="500" constant="10" id="9I8-Xp-QSL"/>
-                                    <constraint firstItem="1PR-j1-uCi" firstAttribute="top" secondItem="oRG-Nx-UEO" secondAttribute="bottom" priority="500" constant="5" id="EmZ-ro-KHE"/>
-                                    <constraint firstItem="1PR-j1-uCi" firstAttribute="leading" secondItem="0jj-bD-P2p" secondAttribute="leading" priority="500" constant="10" id="JdX-9S-Dt8"/>
-                                    <constraint firstAttribute="bottom" secondItem="1PR-j1-uCi" secondAttribute="bottom" priority="500" constant="10" id="SmQ-PR-bl8"/>
-                                    <constraint firstItem="oRG-Nx-UEO" firstAttribute="top" secondItem="7gb-aU-S5Y" secondAttribute="bottom" priority="500" constant="5" id="W3n-sn-zDR"/>
-                                    <constraint firstItem="7gb-aU-S5Y" firstAttribute="leading" secondItem="0jj-bD-P2p" secondAttribute="leading" priority="500" constant="20" id="aBg-dx-lFt"/>
-                                    <constraint firstAttribute="trailing" secondItem="7gb-aU-S5Y" secondAttribute="trailing" priority="500" constant="20" id="poH-Vn-dii"/>
+                                    <constraint firstItem="7gb-aU-S5Y" firstAttribute="top" secondItem="0jj-bD-P2p" secondAttribute="top" constant="10" id="9I8-Xp-QSL"/>
+                                    <constraint firstItem="1PR-j1-uCi" firstAttribute="top" secondItem="oRG-Nx-UEO" secondAttribute="bottom" constant="5" id="EmZ-ro-KHE"/>
+                                    <constraint firstItem="1PR-j1-uCi" firstAttribute="leading" secondItem="0jj-bD-P2p" secondAttribute="leading" constant="10" id="JdX-9S-Dt8"/>
+                                    <constraint firstAttribute="bottom" secondItem="1PR-j1-uCi" secondAttribute="bottom" constant="10" id="SmQ-PR-bl8"/>
+                                    <constraint firstAttribute="trailing" secondItem="oRG-Nx-UEO" secondAttribute="trailing" constant="35.5" id="Uu2-Ve-dli"/>
+                                    <constraint firstItem="oRG-Nx-UEO" firstAttribute="top" secondItem="7gb-aU-S5Y" secondAttribute="bottom" constant="5" id="W3n-sn-zDR"/>
+                                    <constraint firstItem="7gb-aU-S5Y" firstAttribute="leading" secondItem="0jj-bD-P2p" secondAttribute="leading" constant="20" id="aBg-dx-lFt"/>
+                                    <constraint firstItem="oRG-Nx-UEO" firstAttribute="leading" secondItem="0jj-bD-P2p" secondAttribute="leading" constant="35.5" id="ohY-R3-gVN"/>
+                                    <constraint firstAttribute="trailing" secondItem="7gb-aU-S5Y" secondAttribute="trailing" constant="20" id="poH-Vn-dii"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="ivImage" destination="oRG-Nx-UEO" id="WAX-8G-gX6"/>

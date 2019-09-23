@@ -1,16 +1,24 @@
 import UIKit
 import SDWebImage
 
-class EcomViewController: UICollectionViewController {
+class EcomViewController: UICollectionViewController{
     
     static func instantiate()->UIViewController{
         return UIStoryboard(name: "Ecom", bundle: nil).instantiateInitialViewController()!
     }
-
+    
+    let columnLayout = ColumnFlowLayout(
+        cellsPerRow: 2,
+        minimumInteritemSpacing: 10,
+        minimumLineSpacing: 10,
+        sectionInset: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
         title = "E-commerce"
+        collectionView.collectionViewLayout = columnLayout
+        collectionView.contentInsetAdjustmentBehavior = .always
     }
 
 
@@ -30,6 +38,8 @@ extension EcomViewController{
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "cell", for: indexPath) as! ProductCell
         
+        cell.frame.size.width = view.frame.size.width/2 - 10
+        cell.frame.size.height = cell.frame.size.width
         cell.lbName.text = "Flower"
         cell.lbPrice.text = "Buquet"
         cell.lbPrice.text = "$123"
