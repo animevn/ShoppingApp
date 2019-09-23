@@ -11,8 +11,28 @@
 		F1AB023F2338619E00C55ABC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB023E2338619E00C55ABC /* ViewController.swift */; };
 		F1AB02422338619E00C55ABC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AB02402338619E00C55ABC /* Main.storyboard */; };
 		F1AB0244233861A000C55ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AB0243233861A000C55ABC /* Assets.xcassets */; };
-		F1AB0247233861A000C55ABC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AB0245233861A000C55ABC /* LaunchScreen.storyboard */; };
+		F1AB0247233861A000C55ABC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AB0245233861A000C55ABC /* Launch.storyboard */; };
+		F1AB024F2338673C00C55ABC /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB024E2338673C00C55ABC /* RegisterVC.swift */; };
+		F1AB025223386B4600C55ABC /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AB025123386B4600C55ABC /* Register.storyboard */; };
+		F1AB02552338713A00C55ABC /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AB02542338713A00C55ABC /* SDWebImage.framework */; };
+		F1AB02572338714500C55ABC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AB02562338714500C55ABC /* SwiftyJSON.framework */; };
+		F1AB025A233871E700C55ABC /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1AB02562338714500C55ABC /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F1AB025B233871EA00C55ABC /* SDWebImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1AB02542338713A00C55ABC /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F1AB0259233871DB00C55ABC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F1AB025B233871EA00C55ABC /* SDWebImage.framework in CopyFiles */,
+				F1AB025A233871E700C55ABC /* SwiftyJSON.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F1AB02392338619E00C55ABC /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,8 +40,12 @@
 		F1AB023E2338619E00C55ABC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1AB02412338619E00C55ABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1AB0243233861A000C55ABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F1AB0246233861A000C55ABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1AB0246233861A000C55ABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		F1AB0248233861A000C55ABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1AB024E2338673C00C55ABC /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		F1AB025123386B4600C55ABC /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		F1AB02542338713A00C55ABC /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		F1AB02562338714500C55ABC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1AB02572338714500C55ABC /* SwiftyJSON.framework in Frameworks */,
+				F1AB02552338713A00C55ABC /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +66,7 @@
 			children = (
 				F1AB023B2338619E00C55ABC /* ShoppingApp */,
 				F1AB023A2338619E00C55ABC /* Products */,
+				F1AB02532338713900C55ABC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +82,32 @@
 			isa = PBXGroup;
 			children = (
 				F1AB023C2338619E00C55ABC /* AppDelegate.swift */,
+				F1AB025023386AFA00C55ABC /* Register */,
 				F1AB023E2338619E00C55ABC /* ViewController.swift */,
 				F1AB02402338619E00C55ABC /* Main.storyboard */,
+				F1AB025123386B4600C55ABC /* Register.storyboard */,
 				F1AB0243233861A000C55ABC /* Assets.xcassets */,
-				F1AB0245233861A000C55ABC /* LaunchScreen.storyboard */,
+				F1AB0245233861A000C55ABC /* Launch.storyboard */,
 				F1AB0248233861A000C55ABC /* Info.plist */,
 			);
 			path = ShoppingApp;
+			sourceTree = "<group>";
+		};
+		F1AB025023386AFA00C55ABC /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				F1AB024E2338673C00C55ABC /* RegisterVC.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		F1AB02532338713900C55ABC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1AB02562338714500C55ABC /* SwiftyJSON.framework */,
+				F1AB02542338713A00C55ABC /* SDWebImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +120,8 @@
 				F1AB02352338619E00C55ABC /* Sources */,
 				F1AB02362338619E00C55ABC /* Frameworks */,
 				F1AB02372338619E00C55ABC /* Resources */,
+				F1AB02582338714F00C55ABC /* ShellScript */,
+				F1AB0259233871DB00C55ABC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -122,19 +170,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1AB0247233861A000C55ABC /* LaunchScreen.storyboard in Resources */,
+				F1AB0247233861A000C55ABC /* Launch.storyboard in Resources */,
 				F1AB0244233861A000C55ABC /* Assets.xcassets in Resources */,
 				F1AB02422338619E00C55ABC /* Main.storyboard in Resources */,
+				F1AB025223386B4600C55ABC /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F1AB02582338714F00C55ABC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F1AB02352338619E00C55ABC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1AB024F2338673C00C55ABC /* RegisterVC.swift in Sources */,
 				F1AB023F2338619E00C55ABC /* ViewController.swift in Sources */,
 				F1AB023D2338619E00C55ABC /* AppDelegate.swift in Sources */,
 			);
@@ -151,12 +223,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F1AB0245233861A000C55ABC /* LaunchScreen.storyboard */ = {
+		F1AB0245233861A000C55ABC /* Launch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F1AB0246233861A000C55ABC /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Launch.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,7 +355,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ShoppingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +377,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ShoppingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
