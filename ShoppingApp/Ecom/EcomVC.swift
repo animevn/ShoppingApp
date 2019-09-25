@@ -3,6 +3,9 @@ import SDWebImage
 
 class EcomViewController: UICollectionViewController{
     
+    let productStore = ProductStore(delegate: Gateway())
+    private var products = [Product]()
+    
     static func instantiate()->UIViewController{
         return UIStoryboard(name: "Ecom", bundle: nil).instantiateInitialViewController()!
     }
@@ -15,10 +18,17 @@ class EcomViewController: UICollectionViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
         title = "E-commerce"
         collectionView.collectionViewLayout = columnLayout
         collectionView.contentInsetAdjustmentBehavior = .always
+        
+        productStore.retriev{[weak self] products in
+            self?.products = products
+            print(products.count)
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
     }
 
 
@@ -28,7 +38,7 @@ extension EcomViewController{
     
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
-        return 40
+        return products.count
     }
     
     override func collectionView(
@@ -38,15 +48,12 @@ extension EcomViewController{
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "cell", for: indexPath) as! ProductCell
         
-        cell.frame.size.width = view.frame.size.width/2 - 10
-        cell.frame.size.height = cell.frame.size.width
-        cell.lbName.text = "Flower"
-        cell.lbPrice.text = "Buquet"
-        cell.lbPrice.text = "$123"
-        cell.ivImage.sd_setImage(
-            with: URL(string: "https://hoagiare.net/wp-content/uploads/2018/11/sv06.jpg"),
-            completed: nil)
-        cell.ivImage.contentMode = .scaleToFill
+        let product = products[indexPath.row]
+        
+        cell.lbPrice.text = "$\(product.price)"
+        cell.lbProduct.text = product.description
+        cell.ivImage.sd_setImage(with: URL(string: product.images[0].src), completed: nil)
+        cell.backgroundColor = .clear
         return cell
     }
     
