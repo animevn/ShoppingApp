@@ -27,7 +27,6 @@ class ProductStore{
     func retriev(completion:@escaping ([Product])->Void){
         
         delegate.getProduct{
-            
             if let data = $0.data(using: .utf8, allowLossyConversion: false){
                 if let json = try? JSON(data: data){
                     let products:[Product] = json.arrayValue.map{product in

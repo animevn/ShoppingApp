@@ -14,7 +14,7 @@ class EcomViewController: UICollectionViewController{
         cellsPerRow: 2,
         minimumInteritemSpacing: 10,
         minimumLineSpacing: 10,
-        sectionInset: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
+        sectionInset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +49,13 @@ extension EcomViewController{
             withReuseIdentifier: "cell", for: indexPath) as! ProductCell
         
         let product = products[indexPath.row]
-        
         cell.lbPrice.text = "$\(product.price)"
-        cell.lbProduct.text = product.description
+        cell.lbProduct.text = product.name
         cell.ivImage.sd_setImage(with: URL(string: product.images[0].src), completed: nil)
         cell.backgroundColor = .clear
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 8
         return cell
     }
     

@@ -12,17 +12,12 @@ class Gateway:ProductDelegate{
     }
     
     func getProduct(block: @escaping (String) -> Void) {
-        let stringUrl = "\(url)consumer_key=\(id)&consumer_secret=\(secret)&per_page=100"
+        let stringUrl = "\(url)consumer_key=\(id)&consumer_secret=\(secret)"
         guard let url = URL(string: stringUrl) else {return}
         
         DispatchQueue.global().async {
             guard let string = self.performeUrlRequest(url: url) else {return}
             block(string)
         }
-        
-        
-        
     }
-    
-    
 }
